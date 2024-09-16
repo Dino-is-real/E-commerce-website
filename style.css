@@ -1,0 +1,305 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.login-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background-color: #003f7f;
+}
+
+/* Main Styling */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Products Section */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;  /* Make the image take up the full width of the card */
+    height: 250px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    border-radius: 5px;
+}
+
+
+.product-card h3 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Cart Section */
+.cart-section {
+    padding: 20px 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#cart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#total {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+.delete-item {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-item:hover {
+    background-color: darkred; /* Slightly darker red on hover */
+}
+
+/* .delete-item {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.delete-item:hover {
+    background-color: #c82333;
+} */
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Search bar styling */
+#search-bar {
+    padding: 12px 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 300px;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-right: 10px; /* Space between search bar and login button */
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Stronger glow on focus */
+    background-color: #f0f8ff; /* Light background when focused */
+}
+/* Checkout Button Styling */
+#checkout-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block; /* Change from inline to block */
+    margin: 20px auto; /* Center it horizontally */
+}
+
+
+.checkout-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Modal (re-use the existing modal styles for checkout) */
+/* Checkout modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#checkout-items {
+    list-style: none;
+    padding: 0;
+}
+
+#checkout-total {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+
