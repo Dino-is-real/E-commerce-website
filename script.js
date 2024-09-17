@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let totalSum = 0;
     let cart = [];
 
-    // Function to add item to the cart
+
     function addToCart(name, price) {
         const cartItem = { name, price };
 
@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartDisplay();
     }
 
-    // Function to delete item from the cart
+
     function deleteFromCart(index) {
         const item = cart[index];
         totalSum -= item.price;
-        cart.splice(index, 1); // Remove item from cart array
+        cart.splice(index, 1); 
         updateCartDisplay();
     }
 
-    // Function to update the cart display
+
     function updateCartDisplay() {
         cartItems.innerHTML = '';
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Add event listeners to all "Add to Cart" buttons
+  
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     addToCartButtons.forEach(button => {
         button.addEventListener("click", function() {
@@ -59,26 +59,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Login Modal Functionality
+
     const modal = document.getElementById("loginModal");
     const loginBtn = document.querySelector(".login-btn");
     const closeBtn = document.querySelector(".close-btn");
 
     loginBtn.addEventListener("click", function() {
-        modal.style.display = "flex"; // Show the modal
+        modal.style.display = "flex"; 
     });
 
     closeBtn.addEventListener("click", function() {
-        modal.style.display = "none"; // Hide the modal
+        modal.style.display = "none"; 
     });
 
     window.addEventListener("click", function(event) {
         if (event.target == modal) {
-            modal.style.display = "none"; // Hide the modal
+            modal.style.display = "none";
         }
     });
 
-    // Search functionality
+
     const searchBar = document.getElementById("search-bar");
     const productCards = document.querySelectorAll(".product-card");
 
@@ -87,14 +87,14 @@ document.addEventListener("DOMContentLoaded", function() {
         productCards.forEach(card => {
             const productName = card.getAttribute("data-name").toLowerCase();
             if (productName.includes(searchText)) {
-                card.style.display = "block"; // Show if it matches
+                card.style.display = "block"; 
             } else {
-                card.style.display = "none"; // Hide if it doesn't match
+                card.style.display = "none";
             }
         });
     });
 
-    // Checkout Modal Functionality
+   
     const checkoutModal = document.getElementById("checkoutModal");
     const checkoutBtn = document.getElementById("checkout-btn");
     const closeCheckoutBtn = checkoutModal.querySelector(".close-btn");
@@ -102,34 +102,34 @@ document.addEventListener("DOMContentLoaded", function() {
     const checkoutItems = document.getElementById("checkout-items");
     const checkoutTotal = document.getElementById("checkout-total");
 
-    // Function to open the checkout modal and display the cart summary
+   
     checkoutBtn.addEventListener("click", function() {
-        checkoutItems.innerHTML = ''; // Clear previous items
+        checkoutItems.innerHTML = '';
         cart.forEach(item => {
             const li = document.createElement("li");
             li.innerHTML = `<span>${item.name}</span> - ₹${item.price}`;
             checkoutItems.appendChild(li);
         });
         checkoutTotal.textContent = `Total: ₹${totalSum}`;
-        checkoutModal.style.display = "flex"; // Show the modal
+        checkoutModal.style.display = "flex"; 
     });
 
     closeCheckoutBtn.addEventListener("click", function() {
-        checkoutModal.style.display = "none"; // Hide the modal
+        checkoutModal.style.display = "none";
     });
 
     window.addEventListener("click", function(event) {
         if (event.target == checkoutModal) {
-            checkoutModal.style.display = "none"; // Hide the modal if clicked outside
+            checkoutModal.style.display = "none"; 
         }
     });
 
-    // Confirm purchase button
+
     confirmBtn.addEventListener("click", function() {
         alert("Purchase Confirmed! Thank you for shopping.");
-        cart = []; // Clear cart after confirmation
+        cart = []; 
         totalSum = 0;
         updateCartDisplay();
-        checkoutModal.style.display = "none"; // Hide the modal after confirmation
+        checkoutModal.style.display = "none"; 
     });
 });
