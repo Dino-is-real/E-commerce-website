@@ -1,4 +1,4 @@
-/* General Styling */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ body {
     background-color: #003f7f;
 }
 
-/* Main Styling */
+
 main {
     padding: 40px 20px;
     text-align: center;
@@ -52,7 +52,7 @@ h2 {
     color: #333;
 }
 
-/* Products Section */
+
 .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,7 +107,7 @@ h2 {
     background-color: #218838;
 }
 
-/* Cart Section */
+
 .cart-section {
     padding: 20px 40px;
     background-color: #f8f9fa;
@@ -170,22 +170,22 @@ h2 {
 .delete-item:hover {
     background-color: #c82333;
 } */
-/* Modal container */
+
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
-    z-index: 1; /* Sit on top */
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* Modal content */
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -196,7 +196,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button */
+
 .close-btn {
     color: #aaa;
     float: right;
@@ -212,7 +212,7 @@ h2 {
     cursor: pointer;
 }
 
-/* Form styling */
+
 form {
     display: flex;
     flex-direction: column;
@@ -242,25 +242,25 @@ input[type="password"] {
     background-color: #0056b3;
 }
 
-/* Search bar styling */
+
 #search-bar {
     padding: 12px 15px;
     font-size: 1.1em;
     border: 1px solid #ccc;
     border-radius: 30px;
     width: 300px;
-    transition: all 0.3s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-right: 10px; /* Space between search bar and login button */
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-right: 10px; 
 }
 
 #search-bar:focus {
     outline: none;
     border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Stronger glow on focus */
-    background-color: #f0f8ff; /* Light background when focused */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background-color: #f0f8ff;
 }
-/* Checkout Button Styling */
+
 #checkout-btn {
     background-color: #ffc107;
     color: black;
@@ -270,8 +270,8 @@ input[type="password"] {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    display: block; /* Change from inline to block */
-    margin: 20px auto; /* Center it horizontally */
+    display: block;
+    margin: 20px auto; 
 }
 
 
@@ -279,8 +279,7 @@ input[type="password"] {
     background-color: #e0a800;
 }
 
-/* Modal (re-use the existing modal styles for checkout) */
-/* Checkout modal content */
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
